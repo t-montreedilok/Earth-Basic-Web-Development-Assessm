@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Thara Store</title>
+  <script src="modal.js"></script>
+</head>
+<body>
+  <nav class="zone green sticky">
+    <ul class="main-nav">
+      <li>  
+        <a href="index.html"><strong style="font-size: 2em;">Thara Store</strong></a>
+      </li>
+      <li class="push">
+
+        <img id="myBtn" style="cursor: pointer;" src="img/shopping-cart.png" alt="img-card" width="30px" height="30px" />
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="app">
+    
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="main-content">
+          <div class="main-text">
+            <h1>iPhone 13 Pro <br> Your new superpower.</h1>
+            <p> <strong>A dramatically more powerful camera system. A display so responsive, <br> every interaction feels new again.
+              <br class="hidden-w767" />
+              iThe world’s fastest smartphone chip, Exceptional durability.<br />
+              And a huge leap in battery life. Let’s Pro. <br></strong>
+              
+            </p>
+            <!-- <button class="btn-banner"><a href="#content">BUY NOW</a></button> -->
+            <a href="#" class="btn-banner" id="buy-iphone13pro">BUY NOW</a>
+          </div>
+          <div class="main-image">
+            <img src="img/iphone1.png" alt="" width="300px" height="300px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="main-content">
+          <div class="main-text">
+            <h1>iPad Pro<br />Supercharged bt the Apple M1 chip.</h1>
+            <p>
+              <strong>The ultimate iPad experience. <br> Now with breakthrough M1 performance, <br> a breathtaking XDR display, <br> and blazing‑fast 5G wireless. Buckle up.</strong>
+              
+            </p>
+            <a href="#" class="btn-banner" id="buy-ipadpro">BUY NOW</a>
+          </div>
+          <div class="main-image">
+            <img src="img/ipad.png" alt="" width="300px" height="300px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="main-content">
+          <div class="main-text">
+            <h1>Watch Series 7<br />Full screen ahead.</h1>
+            <p>
+              <strong>The larger display enhances the entire experience, <br> making Apple Watch easier to use and read. <br>  
+              Series 7 represents our biggest and brightest thinking yet.</strong>
+              
+            </p>
+            <a href="#" class="btn-banner" id="buy-watch">BUY NOW</a>
+          </div>
+          <div class="main-image">
+            <img src="img/apple_watch.png" alt="" width="300px" height="300px" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" >
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Shopping Cart</h2>
+    </div>
+    <div id="modal-body" class="modal-body">
+
+      <!-- <p style="color: #bbb;" ><strong>No Product</strong></p> -->
+    </div>
+    <div class="modal-footer">
+      <p class="totalprice" id="totalprice"></p>
+      <button class="btn-checkout" id="btn-checkout">Check Out</button>
+    </div>
+  </div>
+
+</div>
+
+    <div class="zone blue grid-wrapper">
+      <div class="box zone">
+        <img src="img/iphone_13_pro_max.png" />
+        <p id="iph13-pro-max"></p>
+        <div class="info">
+          <p id="iph13-pro-max-price"></p>
+          <button class="btn-order" id="order-iph13-pro-max" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/iphone_13.png" />
+        <p id="iph13"></p>
+        <br />
+        <div class="info">
+          <p id="iph13-price"></p>
+          <button class="btn-order" id="order-iph13" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/iphone_12_pro_max_blue.png" />
+        <p id="iph12-pro"></p>
+        <br />
+        <div class="info">
+          <p id="iph12-pro-price"></p>
+          <button class="btn-order" id="order-iph12-pro" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/iphone_12.png" />
+        <p id="iph12"></p>
+        <br />
+        <div class="info">
+          <p id="iph12-price"></p>
+          <button class="btn-order" id="order-iph12" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/ipad_pro_12.png" />
+        <p id="ipad-pro"></p>
+        <br />
+        <div class="info">
+          <p id="ipad-pro-price"></p>
+          <button class="btn-order" id="order-ipad-pro" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/ipad_air_4.png" />
+        <p id="ipad-air"></p>
+        <br />
+        <div class="info">
+          <p id="ipad-air-price"></p>
+          <button class="btn-order" id="order-air" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/ipad-mini.png" />
+        <p id="ipad-mini"></p>
+        <br />
+        <div class="info">
+          <p id="ipad-mini-price"></p>
+          <button class="btn-order" id="order-ipad-mini" value="">Order</button>
+        </div>
+      </div>
+      <div class="box zone">
+        <img src="img/apple_watch_se6.png" />
+        <p id="apple-watch"></p>
+        <br />
+        <div class="info">
+          <p id="apple-watch-price"></p>
+          <button class="btn-order" id="order-apple-watch" value="">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <footer>
+    © Copyright 2019 FED Basic Assessment.
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
