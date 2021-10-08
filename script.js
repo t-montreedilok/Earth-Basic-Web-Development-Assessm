@@ -28,60 +28,14 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-let myJson = {
-  "product": [
-    {
-      "name": "iPhone 13 Pro Max",
-      "brand": "apple",
-      "description": "128GB 6.7inch A15 Bionic",
-      "price": "999",
-    },
-    {
-      "name": "iPhone 13 ",
-      "brand": "apple",
-      "description": "128GB 6.1inch A15 Bionic",
-      "price": "799",
-    },
-    {
-      "name": "iPhone 12 Pro",
-      "brand": "apple",
-      "description": "128GB 6.7inch A14 Bionic",
-      "price": "999",
-    },
-    {
-      "name": "iPhone 12",
-      "brand": "apple",
-      "description": "128GB 6.1inch A14 Bionic",
-      "price": "699",
-    },
-    {
-      "name": "iPad mini",
-      "brand": "apple",
-      "description": "64GB 8.3inch A15 Bionic",
-      "price": "528",
-    },
-    {
-      "name": "iPad Air",
-      "brand": "apple",
-      "description": "64GB 10.9inch A14 Bionic",
-      "price": "578",
-    },
-    {
-      "name": "iPad pro",
-      "brand": "apple",
-      "description": "128GB 12.9inch M1",
-      "price": "873",
-    },
-    {
-      "name": "Apple Watch Series 6",
-      "brand": "apple",
-      "description": "41 mm. GPS+Cellular",
-      "price": "719",
-    },
-  ],
-};
 
-const data = myJson.product;
+
+fetch('./myJson.json')
+.then(response => {
+  return response.json();
+}).then(myJson => {
+  console.log(myJson);
+  const data = myJson.product;
 // console.log(myJson.product[0].name);
 document.getElementById("iph13-pro-max").innerHTML = myJson.product[0].name +'<br>'+data[0].description;
 document.getElementById("iph13-pro-max-price").innerHTML =
@@ -134,10 +88,6 @@ window.onclick = function (event) {
   }
 };
 
-
-
-
-
 const cart = [];
 var total = 0;
 
@@ -153,7 +103,7 @@ const clearData =()=>{
 var txttotal = (document.getElementById("totalprice").innerHTML = `<p>Total price: $${total}</p>`)
 var cart_detail = document.getElementById("modal-body");
 var checkout = (document.getElementById("btn-checkout").onclick = function () {
-  alert("Check Out Success");
+  alert("Check Out Successfully");
   clearData();
     document.getElementById("totalprice").innerHTML 
   = `<p>Total price: $0</p>`
@@ -269,5 +219,8 @@ var appwatch = (document.getElementById("order-apple-watch").onclick =
     totalinner();
     console.log(cart);
   });
+
+})
+
 
   
